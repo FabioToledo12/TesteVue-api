@@ -15,7 +15,7 @@ Antes de iniciar, certifique-se de ter os seguintes softwares instalados:
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-repositorio.git
+   git clone https://github.com/FabioToledo12/TesteVue-api.git
    ```
 2. Acesse o diretório do backend:
    ```sh
@@ -135,24 +135,3 @@ Se desejar contribuir para este projeto, siga estes passos:
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
----
----
-
-### 1️⃣ Gerar o Prisma Client
-Antes de qualquer coisa, você precisa gerar o Prisma Client para que o Prisma possa interagir com seu banco de dados.
-
-        -> npx prisma generate
-    Isso cria a pasta node_modules/.prisma/client, onde ficam os métodos para acessar o banco.
-
-### 2️⃣ Criar as Coleções no MongoDB
-    No MongoDB, ao contrário de bancos SQL, as coleções não são criadas explicitamente. O Prisma criará a coleção automaticamente quando você inserir um dado. Para forçar a criação das coleções com o Prisma, execute:
-        -> npx prisma db push
-        Isso vai sincronizar os modelos do Prisma com o banco sem perder dados existentes.
-    
-    Se você quiser recriar tudo apagando os dados antigos:
-        -> npx prisma migrate reset
-        ⚠️ Isso apagará os dados já existentes no banco.
-
-### 
