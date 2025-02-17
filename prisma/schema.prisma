@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum ShirtSize {
+  PP
+  P
+  M
+  G
+  GG
+  XG
+}
+
+model Functionaries {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  cpf       String @unique
+  name      String
+  email     String @unique
+  shirtSize String
+  shoeSize  Int
+}
